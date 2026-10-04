@@ -1,7 +1,8 @@
 from dotenv import load_dotenv
 import os
 
-load_dotenv()  # 프로젝트 루트의 .env 파일에서 환경변수 로드
+if not load_dotenv():
+    print(".env 파일을 찾을 수 없습니다!")
 
 from openai import OpenAI
 
